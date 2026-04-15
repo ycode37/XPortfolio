@@ -108,6 +108,13 @@
   z-index: 2;
   box-shadow: 6px 6px 0px var(--fg);
   max-width: 600px;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.contact-form-container:hover {
+  transform: translateY(-10px);
+  box-shadow: 12px 12px 0px var(--accent3);
+  border-color: var(--accent3);
 }
 
 .contact-form-container::before {

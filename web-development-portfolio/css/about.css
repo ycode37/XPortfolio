@@ -37,6 +37,13 @@
   overflow: hidden;
   border: 0.25em solid var(--accent3);
   outline: 0.25em solid var(--accent1);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), outline-color 0.4s ease;
+}
+
+.about-hero .about-hero-portrait:hover {
+  transform: translate(-50%, -50%) rotate(0deg) scale(1.05); /* Straightens out and slightly scales up */
+  outline-color: var(--accent4);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
 }
 
 .about-hero .about-hero-bio {
@@ -64,6 +71,12 @@
   border-radius: 1em;
   padding: 3em 2em;
   gap: 2em;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.about-copy .about-copy-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.08); /* Premium soft shadow */
 }
 
 .about-copy .about-copy-content h3 {
@@ -79,6 +92,13 @@
   width: max-content;
   background-color: var(--fg);
   border-radius: 0.5em;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.about-copy .tag:hover {
+  transform: translate(-50%, -50%) scale(1.1) rotate(0deg) !important;
+  z-index: 10;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-copy .tag p {
@@ -174,6 +194,28 @@
   aspect-ratio: 16/7;
   padding: 2em;
   border-radius: 1em;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease, background-color 0.4s ease;
+  cursor: pointer;
+}
+
+.stats .stats-item-1:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(255, 59, 112, 0.3); /* matching --accent1 */
+  background-color: var(--accent4); /* shifts to purple */
+  color: var(--bg);
+}
+
+.stats .stats-item-2:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 229, 255, 0.3); /* matching --accent3 */
+  background-color: var(--accent2); /* shifts to orange */
+}
+
+.stats .stats-item-3:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); 
+  background-color: var(--accent1); /* shifts to pink/red */
+  color: var(--bg);
 }
 
 .stats .stats-col {

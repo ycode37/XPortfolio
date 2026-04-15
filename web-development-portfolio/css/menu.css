@@ -41,6 +41,17 @@ nav {
   nav .menu-toggle-btn {
     border-radius: 0.4em;
     cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease;
+  }
+
+  nav .logo:hover {
+    transform: scale(1.05) rotate(-3deg);
+    background-color: var(--accent1);
+  }
+
+  nav .menu-toggle-btn:hover {
+    transform: scale(1.05) rotate(3deg);
+    background-color: var(--accent3);
   }
   
   nav .menu-toggle-btn-wrapper {
@@ -84,6 +95,12 @@ nav {
     opacity: 0;
     border-radius: 0.5em;
     background-color: var(--bg);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+
+  .nav-overlay .nav-items .nav-item:hover {
+    background-color: var(--accent2);
+    box-shadow: 0 10px 20px rgba(255, 155, 66, 0.2);
   }
   
   .nav-overlay .nav-items .nav-item p {
@@ -143,6 +160,14 @@ nav {
     padding: 0.5em 0.65em;
     border-radius: 0.4em;
     text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+  }
+
+  .nav-overlay .nav-footer .nav-footer-item .nav-footer-item-header p:hover {
+    background-color: var(--accent4);
+    color: var(--bg);
+    transform: translateY(-3px) scale(1.05);
   }
   
   .nav-overlay .nav-footer .nav-footer-item .nav-footer-item-copy {
